@@ -1,4 +1,4 @@
-package com.company.arrays;
+package com.company.StringS;
 
 import java.util.Scanner;
 
@@ -22,7 +22,7 @@ public class UniqueChars {
         for(int counter=0;counter < inputStr.length(); counter++){
 
             int val= inputStr.charAt(counter);
-            char x= inputStr.charAt(counter);
+            //char x= inputStr.charAt(counter);
             if(char_set[val])
                 return false;
             char_set[val]= true;

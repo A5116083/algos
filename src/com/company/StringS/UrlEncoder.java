@@ -1,4 +1,4 @@
-package com.company.arrays;
+package com.company.StringS;
 
 public class UrlEncoder {
 }

@@ -1,4 +1,4 @@
-package com.company.arrays;
+package com.company.numbers;
 
 public class SubSet {
 

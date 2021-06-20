@@ -1,4 +1,4 @@
-package com.company;
+package com.company.numbers;
 
 
 import java.util.IdentityHashMap;
