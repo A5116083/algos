@@ -67,5 +67,26 @@ public class BalancedTree {
                 return l && r;
 
         }
+
+        public  int findMin(Node root)
+        {
+            // Write - Your - Code
+            if(root.left== null && root.right==null)
+                return root.data;
+            else{
+                return findMin(root.left);
+            }
+
+        }
+        public  int findMax(Node root)
+        {
+            // Write - Your - Code
+            if(root.left== null && root.right==null)
+                return root.data;
+            else{
+                return findMin(root.right);
+            }
+
+        }
     }
 }

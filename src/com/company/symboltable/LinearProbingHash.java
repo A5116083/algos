@@ -12,14 +12,6 @@ public class LinearProbingHash {
         str.add("A"); str.add("B"); str.add("C");
         Iterator<String> itr = str.iterator();
 
-
-       /* while (itr.hasNext())
-            System.out.println(itr.next());*/
-/*
-        for(String str1:str){
-            System.out.println(str1);
-
-        }*/
         str.forEach(System.out::println);
 
     }
