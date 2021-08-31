@@ -24,7 +24,7 @@ public class LeftViewTree {
                     queue.offer(currentNode.right);
             }
             result.add(levelNodes.poll());
-        }
+       }
         return result;
     }
 

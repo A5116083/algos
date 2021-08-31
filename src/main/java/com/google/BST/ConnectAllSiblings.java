@@ -1,7 +1,15 @@
 package com.google.BST;
 
 import java.util.*;
+/*
+Given the root to a binary tree where each node has an additional pointer called sibling (or next), connect the sibling pointer to the next node in the same level.
+The last node in each level should point to the first node of the next level in the tree.
 
+Consider the following binary tree.
+100,50,200,25,75,300,350
+100->50->200->25->75->300->350->NULL
+
+ */
 class TreeNode {
     int val;
     TreeNode left;
@@ -18,7 +26,6 @@ class ConnectAllSiblings {
 
     public static void connect(TreeNode root) {
 
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if(root==null) return  ;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
