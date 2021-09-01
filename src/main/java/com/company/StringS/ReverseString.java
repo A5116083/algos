@@ -8,9 +8,11 @@ public class ReverseString {
 
     public static void main(String[] args) {
         String seq = "getting good at coding needs a lot of practice";
-
+        System.out.println("string to reversed : " + seq);
         String resp = reverseString(seq);
         System.out.println(resp);
+        System.out.println("recursive ");
+        System.out.println(reverseStringRec(seq.split(" "),0,new StringBuilder()));
     }
 
     public static String reverseString(String input) {
@@ -26,5 +28,13 @@ public class ReverseString {
             retunString.append(stringStack.pop() + " ");
         }
         return retunString.toString().trim();
+    }
+
+    public static String reverseStringRec(String[] arr, int index, StringBuilder reversed){
+        if(index == arr.length) return "";
+
+        reverseStringRec(arr,index+1, reversed);
+        reversed.append(arr[index] + " ");
+        return reversed.toString();
     }
 }

@@ -18,7 +18,7 @@ class RightViewTree {
             LinkedList<TreeNode> levelNodes = new LinkedList<>();
             for(int i=0; i< currentLevel;i++){
                 TreeNode currentNode = queue.poll();
-                levelNodes.addLast(currentNode);
+                levelNodes.addFirst(currentNode);
                 if(currentNode.left!=null)
                     queue.offer(currentNode.left);
                 if(currentNode.right!=null)

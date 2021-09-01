@@ -17,7 +17,7 @@ public class LeftViewTree {
             LinkedList<TreeNode> levelNodes = new LinkedList<>();
             for(int i=0; i< currentLevel;i++){
                 TreeNode currentNode = queue.poll();
-                levelNodes.addFirst(currentNode);
+                levelNodes.addLast(currentNode);
                 if(currentNode.left!=null)
                     queue.offer(currentNode.left);
                 if(currentNode.right!=null)
@@ -36,7 +36,7 @@ public class LeftViewTree {
         root.right.left = new TreeNode(10);
         root.right.right = new TreeNode(5);
         root.left.left.left = new TreeNode(3);
-        List<TreeNode> result = RightViewTree.traverse(root);
+        List<TreeNode> result = LeftViewTree.traverse(root);
         for (TreeNode node : result) {
             System.out.print(node.val + " ");
         }

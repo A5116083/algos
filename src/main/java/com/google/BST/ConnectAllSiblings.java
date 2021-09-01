@@ -10,17 +10,9 @@ Consider the following binary tree.
 100->50->200->25->75->300->350->NULL
 
  */
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode next;
+/*class TreeNode {
 
-    TreeNode(int x) {
-        val = x;
-        left = right = next = null;
-    }
-};
+};*/
 
 class ConnectAllSiblings {
 

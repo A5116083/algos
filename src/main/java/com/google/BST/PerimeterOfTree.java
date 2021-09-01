@@ -20,7 +20,7 @@ Once we hit the leaf node, we will pop all elements of the stack while printing 
 
 public class PerimeterOfTree {
 
-    private static class TreeNode {
+   /* private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -28,7 +28,7 @@ public class PerimeterOfTree {
         TreeNode(int x) {
             val = x;
         }
-    }
+    }*/
 
 
     private static void printLeftPerimeter(TreeNode node, StringBuilder nodesStr){

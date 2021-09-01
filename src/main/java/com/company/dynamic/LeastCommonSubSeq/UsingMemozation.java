@@ -7,8 +7,8 @@ public class UsingMemozation {
 
     public static void main(String[] args) {
 
-        String s1= "bd";
-        String s2= "abcd";
+        String s1= "abdca";
+        String s2= "cbda";
         char[] A= s1.toCharArray();
         char[] B= s2.toCharArray();
         int m= A.length;

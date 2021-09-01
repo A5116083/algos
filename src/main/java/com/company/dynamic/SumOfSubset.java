@@ -1,7 +1,11 @@
 package com.company.dynamic;
 
 
-public class SubOfSubset {
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+public class SumOfSubset {
 
     /* Driver code*/
     public static void main(String args[]) {
@@ -15,6 +19,9 @@ public class SubOfSubset {
         else
             System.out.println("No subset with"
                     + " given sum");
+        List<HashSet<Integer>> result=  subSetEqualsSum(set,sum);
+        System.out.println(result);
+
     }
 
     // Returns true if there is a subset of
@@ -42,7 +49,7 @@ public class SubOfSubset {
 
 
         // uncomment this code to print table
-        for (int i = 0; i <= n; i++) {
+        /*for (int i = 0; i <= n; i++) {
             StringBuilder strBuilder = new StringBuilder();
             strBuilder.append("i: " + i+ " ");
             for (int j = 0; j <= sum; j++) {
@@ -50,8 +57,39 @@ public class SubOfSubset {
                 strBuilder.append(subset[i][j]+ " ");
             }
             System.out.println(strBuilder.toString());
-        }
+        }*/
 
         return subset[n][sum];
+    }
+    static int getBit(int num, int bit) {
+        int temp = (1<< bit);
+        temp = temp & num;
+        if (temp == 0) {
+            return 0;
+        }
+        return 1;
+    }
+    private static List<HashSet<Integer>> subSetEqualsSum(int[] arr, int sum){
+        List<HashSet<Integer>> result = new ArrayList<>();
+        int size = arr.length;
+        int numOfSubSets =(int) Math.pow(2,size);
+
+        for(int i =0;i< numOfSubSets;i++){
+            HashSet<Integer> set= new HashSet<>();
+            int currentSum =0;
+            for(int j=0;j< size;j++){
+                if (getBit(i, j) == 1) {//mean that positional set is and all other bits are blocked by masking
+                    currentSum += arr[j];
+                    if(currentSum>sum)
+                        break;
+                    set.add(arr[j]);
+                }
+            }
+            if(currentSum == sum) {
+                result.add(set);
+
+            }
+        }
+        return result;
     }
 }
