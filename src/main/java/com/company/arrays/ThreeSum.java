@@ -4,13 +4,10 @@ import java.util.Arrays;
 
 public class ThreeSum {
 
-    public static boolean isThreeSumExist(int[] inputArr, int requiredSum){
-        for (int i =0;i< inputArr.length-2;i++){
-            int remainingSum = requiredSum- inputArr[i];
-           if(TwoSumHashTable.isTwoSum(inputArr,remainingSum,i+1))
-               return true;
-        }
-        return false;
+   /* public static boolean isThreeSumExist(int[] inputArr, int requiredSum){
+
+
+
     }
 
     public static void main(String[] args) {
@@ -20,5 +17,5 @@ public class ThreeSum {
         System.out.println("Sum 20 exists: " + isThreeSumExist(arr, 20));
         System.out.println("Sum 10 exists: " + isThreeSumExist(arr, 10));
         System.out.println("Sum 21 exists: " + isThreeSumExist(arr, 21));
-    }
+    }*/
 }

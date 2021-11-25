@@ -1,13 +1,17 @@
 package com.company.arrays;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class RemoveEvenInteger {
 
 
     public static void main(String[] args) {
 
         int[] inputArr= {1,2,4,5,10,6,3};
-        int[] returnArray = removeEven(inputArr);
-
+        //int[] returnArray = removeEven(inputArr);
+        int[] returnArray = removeEvenValues(inputArr);
         for (int index=0; index< returnArray.length; index++){
             System.out.printf(returnArray[index]+  " ");
         }
@@ -34,5 +38,11 @@ public class RemoveEvenInteger {
         }
         return returnArray;
 
+    }
+
+    static int[] removeEvenValues(int[] arr){
+
+        return Arrays.stream(arr)
+                .filter(num-> num%2!=0).toArray();
     }
 }

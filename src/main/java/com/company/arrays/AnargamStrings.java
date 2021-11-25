@@ -18,11 +18,11 @@ public class AnargamStrings {
         char[] c1 = s1.toCharArray();
         char[] c2 = s2.toCharArray();
 
-        for (Character c : c1){
+        for (Character c : c1.length> c2.length? c2:c1){
             charFreq[c]++;
         }
 
-        for (char c : c2){
+        for (char c : c1.length> c2.length? c1:c2){
             charFreq[c]--;
             if(charFreq[c]<0)
                 return false;

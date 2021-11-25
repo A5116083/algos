@@ -25,4 +25,6 @@ public class FindNonRepeatingUnique {
         int result= mapCounter.entrySet().stream().filter(kvp-> kvp.getValue()==1).findFirst().get().getKey();
         return result;
     }
+
+
 }
